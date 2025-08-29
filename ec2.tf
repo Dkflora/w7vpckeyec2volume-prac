@@ -28,6 +28,6 @@ resource "aws_ebs_volume" "utc-ebs" {
 
 resource "aws_volume_attachment" "utc-ebs" {
   instance_id = aws_instance.server.id
-  volume_id = aws_ebs_volume.utc-ebs.id
+  volume_id   = aws_ebs_volume.utc-ebs.id
   device_name = "/dev/sdb"
 }
